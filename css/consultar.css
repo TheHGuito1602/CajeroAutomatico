@@ -15,10 +15,10 @@
     src: url("../tools/Chakra_Petch/ChakraPetch-Regular.ttf");
 }
 
-html,
+/* html,
 body {
     height: 100%;
-}
+} */
 
 body{
     display: flex;
@@ -29,4 +29,8 @@ body{
     background-image: url(../imagenes/5001.jpg);
     background-repeat: repeat;
     background-size: 100%;
+}
+
+svg{
+    width: 1rem;
 }

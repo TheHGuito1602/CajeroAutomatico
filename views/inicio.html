@@ -12,18 +12,17 @@
         integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
         crossorigin="anonymous"></script>
     <link rel="shortcut icon" href="../imagenes/house-solid.svg">
+    <script defer src="../js/inicio.js"></script>
     <title>Inicio</title>
 </head>
 
 <body class="container-fluid">
     <header class="rounded-5 border border-black border-4 bg-primary text-white text-center p-3">
-        <h1 class="p-0">¡Hola! Escoja una opción a realizar</h1>
+        <h1  class="p-0" id="userName"></h1>
     </header>
-
     <main class="w-auto mx-auto mt-3">
         <section class="mx-auto p-0 text-center bg-black rounded-3">
-            <a href="consultar.html" class="text-decoration-none">
-                <button class="elemento-b">
+                <button class="elemento-b" data-bs-target="#ConsultarSaldo" data-bs-toggle="modal">
                     <svg xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 576 512"><!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
                         <path
@@ -31,7 +30,6 @@
                     </svg>
                     <p class="m-0">Consultar saldo</p>
                 </button>
-            </a>
             <a href="ingresar.html" class="text-decoration-none">
                 <button class="elemento-b">
                     <svg xmlns="http://www.w3.org/2000/svg"
@@ -42,7 +40,6 @@
                     <p class="m-0">Ingresar dinero</p>
                 </button>
             </a>
-
             <a href="retirar.html" class="text-decoration-none">
                 <button class="elemento-b">
                     <svg xmlns="http://www.w3.org/2000/svg"
@@ -64,7 +61,63 @@
                 </button>
             </a>
         </section>
+        <div class="modal fade" id="ConsultarSaldo" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5 text-dark" id="staticBackdropLabel">Saldo</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body text-dark" id="cuerpo-consultar">
+                        ...
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="IngresarDinero" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5 text-dark" id="staticBackdropLabel">Saldo</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body text-dark" id="cuerpo-ingresar">
+                        ...
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Confirmar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="RetirarDinero" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5 text-dark" id="staticBackdropLabel">Saldo</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body text-dark" id="cuerpo-retirar">
+                        ...
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Confirmar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
 </body>
-
 </html>
