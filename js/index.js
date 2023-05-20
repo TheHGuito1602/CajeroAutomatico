@@ -6,25 +6,23 @@ const accounts = [
 ];
 
 const form = document.querySelector('#loginForm');
-/* FORMULARIO */
 
 form.addEventListener('submit', event => {
     event.preventDefault(); // Evita que se envíe el formulario automáticamente
     if (form.checkValidity()) {
         if (validateCredentials(form)) {
             saveToLocalStorage(form);
-            /* REDIRECCIONAR */
             showLoaderAndRedirect({url: '/views/inicio.html'}); // Muestra el loader y redirige a la página de inicio
         } else {
             showAlert({ message: 'Usuario o contraseña incorrectos' });
         }
     } else {
-        event.stopPropagation(); // Evita que se propague el evento de validación
+        event.stopPropagation(); // retenemos el evento de validación
     }
 });
 
 function showLoaderAndRedirect({ url }) {
-        form.submit(); // Envía el formulario si las credenciales son válidas
+        form.submit(); // Envía el formulario si las info son válidas
         window.location.href = url; // Redirige a la página de inicio
     //}, 3000);
 }
