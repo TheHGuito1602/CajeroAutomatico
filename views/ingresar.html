@@ -14,6 +14,32 @@
     <title>Ingresar</title>
 </head>
 <body>
-    
+    <main class="bg-white border rounded-2">
+        <div class="fade" id="IngresarDinero" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5 text-dark" id="staticBackdropLabel">Ingrese el monto</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body text-dark" id="cuerpo-ingresar">
+                        <form id="formIngresar">
+                            <div class="mb-3">
+                                <input type="number" class="form-control" id="exampleInputMoney" min="1" max="990"
+                                    name="cantidadI">
+                                <div id="moneyHelp" class="form-text">Montos disponibles desde $1 hasta $990</div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                        <button type="submit" form="formIngresar" class="btn btn-primary"
+                            data-bs-dismiss="modal">Confirmar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
 </body>
 </html>
